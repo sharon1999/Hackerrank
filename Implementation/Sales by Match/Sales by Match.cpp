@@ -16,7 +16,13 @@ vector<string> split(const string &);
  */
 
 int sockMerchant(int n, vector<int> ar) {
-
+    int pairs=0;
+    map<int,int> counter;
+    for(int x: ar){
+        counter[x]++;
+        if(counter[x]%2==0) pairs++;
+    }
+    return pairs;
 }
 
 int main()
